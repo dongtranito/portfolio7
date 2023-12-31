@@ -1,0 +1,417 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "font3";
+
+}
+@font-face {
+    font-family: 'font1'; 
+    src: url('../trangchu/font/FrancoisOne-Regular.ttf') ; 
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('../trangchu/font/MavenPro-VariableFont_wght.ttf');
+}
+/* thanh dieu huong */
+.dieuHuong{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #212121;
+    padding: 0px 80px;
+    position:fixed;
+    width:100%;
+    top:0px;
+    z-index: 998;
+}
+.dieuHuong div a{
+    text-decoration: none;
+    color:white;
+}
+
+.dieuHuong div a:hover {
+    color: rgb(247, 145, 145); 
+}
+
+.trangChu{
+
+}
+.thanhVien{
+    display:flex;
+    justify-content: space-between;
+    width:400px;
+}
+
+
+
+
+/* END THANH DIEU HUONG */
+/* GIOI THIEU BAN THAN */
+
+.gioiThieu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:120px 0px 150px 0px;
+    background-color: #212121;
+    position: relative;
+}
+
+.gioiThieu_noiDung,
+.gioiThieu_anh {
+    flex: 1;
+}
+
+.gioiThieu_noiDung {
+    margin-right: 20px; 
+    padding:0px 190px;
+    width:200px;
+    color:#f9edc8e8;
+}
+.gioiThieu_noiDung_tieuDe{
+    padding-bottom: 30px;
+    text-align: right;
+    font-size: 50px;
+    font-family: 'font1';
+}
+
+.toila{
+    font-family:'font1';
+    font-size:35px;
+}
+.gioiThieu_noiDung_moTa{
+    text-align: justify;
+    font-size: 24px;
+}
+.gioiThieu_anh img {
+    max-width: 75%;
+    position: relative;
+    z-index: 2;
+    top:20px;
+    animation: shake 2s infinite; 
+}
+
+@keyframes shake {
+    0% { transform: rotate(-3deg); } 
+    50% { transform: rotate(3deg); } 
+    100% { transform: rotate(-3deg); } 
+}
+
+.gioiThieu_vongTron{
+    background-color: pink;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    right:180px;
+    top:140px;
+    display:none;
+}
+/* END GIOI THIEU BAN THAN */
+
+/* TRINH BAY SAN PHAM */
+
+.sanPham{
+    position:relative;
+    background-color: #f6f0df;
+    height: 100vh;
+}
+
+.slider{
+    width:60%;
+    height: 100%;
+    position: absolute;
+    
+    padding-top:70px;
+}
+
+.sanPham .slider .anh{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin:auto;
+  height: 70%;
+  padding-top:60px;
+  position: relative;
+  z-index: 10;
+}
+.slider img{
+    max-width: 100%;
+    max-height:100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 5px ;
+}
+
+.sanPham .noiDung{
+    position:absolute;
+    width: 40%;
+    right: 0px;
+    top:200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom :50px;
+    padding-right: 100px;
+}
+
+.tieude{
+    font-size: 24px;
+    height: 100px;
+    font-weight: 800;
+} 
+.mota {
+    font-size: 20px;
+}
+
+
+
+.slider .buttons{
+    position: absolute;
+    top:40%;
+    padding:0px 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    font-weight: 1000;
+    font-family: monospace;
+    background-color: none;
+    background-color:rgb(243, 234, 234);
+}
+
+.slider .buttons button:hover{
+    background-color:rgb(223, 207, 207);
+    cursor: pointer;
+}
+
+.slider .dots{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ff7171;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+
+.hien {
+    animation: fadein 0.5s ease;
+}
+
+@keyframes fadein {
+    from { opacity: 0.3; }
+    to   { opacity: 1; }
+}
+
+.anhPhongTo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#f6f0df; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 999; 
+    display:none;
+
+}
+.anhPhongTo img {
+    max-width: 95%; 
+    max-height: 95%; 
+    border:none;
+    border-radius: 0px;
+    object-fit: contain
+}
+
+.slider img:hover{
+    cursor: pointer;
+}
+
+/* END TRINH BAY SAN PHAM */
+
+/* SKILL */
+.skill {
+    padding:50px 200px;
+    position: relative;
+    background-color: #f6f0df;
+
+  }
+  
+  .skillHeader{
+    padding:50px 0px;
+    font-size: 40px;
+    font-family:'font1'
+  }
+  .skill-name {
+    margin-bottom: 10px;
+    font-family: 'font3';
+    font-size: 20px;
+  }     
+  
+  .skill-bar {
+    position: relative;
+    background-color: #ddd;
+    height: 15px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+  }
+  
+  .skill-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #ff9f9f;
+    border-radius: 5px;
+    box-shadow: -2px 7px 10px 0 rgba(156, 96, 96, 0.9);
+  }
+  
+  .skill-progress.animate{
+    animation: phantram 1.5s ease;
+  }
+  .skill-text {
+    position: absolute;
+    top: -40px; 
+    right:0px; 
+    transform: translateX(35%);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    box-shadow: -2px 7px 10px 0 rgba(0, 0, 0, 0.5);
+    font-family: 'font3';
+  }
+
+  .skill-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 10px solid transparent;
+    border-top-color:#ccc; 
+    transform: translateX(-50%);
+  }
+  
+@keyframes phantram{
+    0%{
+        width:0px;
+    }
+    100%{
+    }
+  }
+/* END SKILL */
+
+/* CONTACT */
+
+.contact{
+    padding:110px 0px;
+}
+.contact_icon div{
+    width:50px;
+}
+.contact_icon div svg{
+    height: 80%;
+    fill:rgba(120, 104, 104, 0.868);
+}
+
+.contact_icon{
+    display:flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 50%;
+}
+.contact_noidung{
+    text-align: center;
+    padding:40px 0px;
+}
+
+.contact_noidung_tieude{
+    font-size: 80px;
+    letter-spacing: 40px;
+    font-family: 'font1';
+}
+
+.contact_noidung_ten{
+    font-size: 20px;
+    font-style: italic;
+    padding:20px 0px;
+    font-family: 'font3';
+}
+
+.contact_icon a:hover svg {
+    fill: rgb(247, 145, 145); 
+}
+
+/* END CONTACT */
+
+
+/* FOOTER */
+
+.footer{
+    width: 100%;
+    background-color: #f6f0df;
+    padding:50px 0px;
+}
+.footer1{
+    width: 90%;
+    margin: auto;
+}
+.footer_noiDung{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.footer_icon{
+    display: flex;
+    justify-content: space-between;
+    width: 18%;
+    align-items:flex-end;
+}
+
+.footer_icon div{
+    width: 25px;
+}
+.footer_icon div svg{
+    fill: rgba(50, 47, 47, 0.578);
+}
+
+.footer_icon div svg:hover{
+    fill:rgb(247, 145, 145); 
+}
+
+
+/* END FOOTER */

@@ -1,0 +1,370 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* background-color: rgb(181, 168, 168); */
+}
+@font-face {
+    font-family: 'font1';
+    src: url('./font/FrancoisOne-Regular.ttf') ; 
+  }
+
+
+@font-face {
+    font-family: 'font3';
+    src: url('./font/MavenPro-VariableFont_wght.ttf');
+}
+body {
+    font-family: "font1";
+} 
+  
+
+/* thanh dieu huong */
+.dieuHuong{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #242424;
+    padding: 0px 80px;
+    position:fixed;
+    width:100%;
+    top:0px;
+    z-index: 999;
+    font-family: 'font3';
+}
+.dieuHuong div a{
+    text-decoration: none;
+    color:white;
+}
+
+.dieuHuong div a:hover {
+    color: rgb(247, 145, 145); 
+}
+
+.trangChu{
+
+}
+.thanhVien{
+    display:flex;
+    justify-content: space-between;
+    width:400px;
+}
+
+
+
+
+/* END THANH DIEU HUONG */
+
+
+
+/* GIOI THIEU NHOM */
+.gioiThieuNhom{
+    margin-top:60px;
+    display:flex;
+    justify-content: space-around;
+    background-color:#242424;
+    padding:70px 40px;
+    
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #eb466d;
+    border-radius: 50%; 
+  }
+  
+.anhNhom{
+    flex:4;
+}
+
+
+.anhNhom img {
+    animation: shake 1s infinite; /* Áp dụng animation vô hạn */
+}
+
+@keyframes shake {
+    0% { transform: rotate(-1deg); } 
+    50% { transform: rotate(1deg); } 
+    100% { transform: rotate(-1deg); } 
+}
+
+
+
+.noiDung{  
+    flex:5;
+    font-family: ;
+}
+.tenNhom{
+    font-size: 50px;
+    Padding-left:30px;
+    color:#ffa9b3;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.gioiThieu{
+    padding-left:30px;
+    width:90%;
+    font-size: 22px;
+    padding-bottom:20px;
+    color:white;
+    font-family: 'font3';
+}
+
+
+/* END GIOI THIEU NHOM */
+/* GIOI THIEU THANH VIEN */
+
+.gioiThieuThanhVien{
+    padding:80px 80px 180px 80px;
+    background-color: #faeec8;
+}
+.strikethrough {
+  position: relative;
+  font-size: 28px;
+  font-weight: 700;
+  padding-left: 5px;
+  color:#43888f;
+}
+
+.strikethrough::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 83%;
+  height: 2px;
+  background-color: #43888f;
+  left:160px;
+}
+
+.tungThanhVien{
+    display:flex;
+    padding-top: 100px;
+    justify-content: space-around;
+}
+.tungThanhVien div a img{
+    width:80%;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.tungThanhVien div a img:hover{
+    transform: scale(1.4);
+}
+
+
+/* END GIOI THIEU THANH VIEN */
+
+/*QUA TRINH LAM DU AN TIMLINE */
+
+@keyframes chay {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: (100% - 40px);
+    }
+}
+.timeLine{
+    padding:100px 100px;
+    background-color: #faeec8;
+    
+}
+.titmeLine_tieuDe{
+    padding-bottom: 80px;
+    font-size: 40px;
+}
+.duongThangTimeLine1,.duongThangTimeLine2{
+    width:3px;
+    position:absolute;
+    left:-10px;
+    top:35px;
+}
+.duongThangTimeLine1{ 
+    background-color: #918a8a;
+    height: calc(100% - 40px);
+}
+.duongThangTimeLine2{
+    background-color: #ffa9b3;
+    height:0px;
+}
+
+.animationTimeLine{
+    animation: 1s chay;
+    height: calc(100% - 40px);
+}
+.detailTimeLine:hover .decorate .nen{
+    width:90px;
+    position:absolute;
+    left:-200px;
+    top:20px;
+    background-color:  #ffa9b3;
+    height: 11px;
+    z-index: 0;
+    transition: background-color 0.5s ease;
+}
+.animationTimeLine1{
+    animation:0.2s chay;
+    height: calc(100% - 40px);
+}
+
+.detailTimeLine:hover .vongTronTimeLine{
+    background-color: #ffa9b3;
+}
+
+.vongTronTimeLine{
+    position:absolute;
+    left:-18px;
+    width:19px;
+    height: 19px;
+    background-color:rgb(145, 138, 138);
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.5s ease;
+    top:5px;
+}
+
+.detailTimeLine{
+    position: relative;
+    margin-left: 300px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.tenTimeline{
+    font-size: 25px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.timeLine .content{
+    padding:0px 0px 50px 0px;
+    text-align: justify;
+}
+.ngayTimeLine{
+    position: absolute;
+    left:-200px;
+    top:5px;
+    z-index: 1;
+}
+
+.noiDungTimeLine{
+    font-family: "font3";
+}
+
+/*END QUA TRINH LAM DU AN TIMELINE */
+
+
+/* FOOTER */
+
+.footer{
+    width: 100%;
+    background-color: #faeec8;
+    padding:50px 0px;
+}
+.footer1{
+    width: 90%;
+    margin: auto;
+}
+.footer_noiDung{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.footer_icon{
+    display: flex;
+    justify-content: space-between;
+    width: 18%;
+    align-items:flex-end;
+}
+
+.footer_icon div{
+    width: 25px;
+}
+.footer_icon div svg{
+    fill: rgba(50, 47, 47, 0.578);
+}
+
+.footer_icon div svg:hover{
+    fill:rgb(247, 145, 145); 
+}
+
+
+/* END FOOTER */
+
+
+/* DU AN CHUNG MV */
+.sanPhamChung{
+    padding:20px 40px 80px 40px;
+    background-color: #faeec8;
+}
+.sanPhamChungTieuDe{
+    height:110vh;
+    display:flex;
+    color:#ff7888;
+    background-color: #242424;
+    letter-spacing: 10px;
+    margin: 0px -40px;
+    justify-content: center;
+    align-items: center;
+    font-size:70px;
+}
+.sanPham_anh {
+    width:60%;
+}
+
+.sanPham_anh img{
+    width:100%;
+    border-radius: 15px;
+}
+.sanPham{
+    display:flex;
+    justify-content: space-between;
+    padding-top:80px;
+}
+.sanPham_ten{
+    font-size: 20px;
+    color:black;
+}
+.sanPham_link a:hover .sanPham_ten {
+    color:red;
+}
+.sanPham_youtube{
+    width: 40px;
+    padding-right: 10px;
+}
+.sanPham_link a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sanPham_link{
+    padding:10px 0px;
+}
+.sanPham_noiDung{
+    width:40%;
+    padding:160px 40px 0px 40px;
+    text-align: center;
+}
+
+.sanPham_tieuDe{
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-weight: 700;
+}
+
+.sanPham_moTa{
+    font-size: 20px;
+    font-family: 'font3';
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* END DU AN CHUNG MV */
+
+.display{
+    display:none;
+}
